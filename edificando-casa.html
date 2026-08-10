@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#000000">
+  <title>Edificando Casa | Ríos de Vida</title>
+
+  <style>
+    @font-face{
+      font-family:'Neue Montreal';
+      src:url('NeueMontreal-Regular.otf') format('opentype');
+      font-weight:400;
+      font-style:normal;
+      font-display:swap;
+    }
+
+    @font-face{
+      font-family:'Neue Montreal';
+      src:url('NeueMontreal-Bold.otf') format('opentype');
+      font-weight:700;
+      font-style:normal;
+      font-display:swap;
+    }
+
+    :root{
+      --white:#ffffff;
+      --black:#000000;
+      --sand:#d6c9b8;
+    }
+
+    *{box-sizing:border-box}
+
+    html,body{
+      margin:0;
+      min-height:100%;
+    }
+
+    body{
+      font-family:'Neue Montreal', Arial, Helvetica, sans-serif;
+      background:var(--black);
+      color:var(--white);
+    }
+
+    .hero{
+      min-height:100svh;
+      width:100%;
+      position:relative;
+      display:flex;
+      align-items:flex-end;
+      overflow:hidden;
+      background:
+        linear-gradient(
+          180deg,
+          rgba(0,0,0,.06) 0%,
+          rgba(0,0,0,.14) 45%,
+          rgba(0,0,0,.76) 100%
+        ),
+        url('edificando-casa-hero-final.png') center center / cover no-repeat;
+    }
+
+    .hero-content{
+      width:min(92%, 1320px);
+      margin:0 auto;
+      padding-bottom:clamp(50px, 8vw, 105px);
+      position:relative;
+      z-index:2;
+    }
+
+    h1{
+      margin:0;
+      max-width:1100px;
+      font-size:clamp(56px, 9vw, 142px);
+      line-height:.9;
+      letter-spacing:-.055em;
+      font-weight:700;
+      text-transform:uppercase;
+    }
+
+    p{
+      max-width:850px;
+      margin:28px 0 0;
+      font-size:clamp(18px, 2.1vw, 30px);
+      line-height:1.25;
+      letter-spacing:-.018em;
+      color:rgba(255,255,255,.95);
+    }
+
+    @media (max-width:700px){
+      .hero{
+        background-position:42% center;
+      }
+
+      .hero-content{
+        width:88%;
+        padding-bottom:46px;
+      }
+
+      h1{
+        font-size:clamp(48px, 16vw, 78px);
+      }
+
+      p{
+        margin-top:22px;
+        font-size:18px;
+        line-height:1.35;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Edificando Casa</h1>
+        <p>Un lugar de refugio, preservación y restauración; una casa donde Dios sana, fortalece y prepara vidas para cumplir su propósito.</p>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
