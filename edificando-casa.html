@@ -262,6 +262,60 @@
       }
     }
 
+  
+    .gallery{
+      background:#000000;
+      padding:8px;
+    }
+
+    .gallery-grid{
+      display:grid;
+      grid-template-columns:repeat(3, 1fr);
+      gap:8px;
+      max-width:1600px;
+      margin:0 auto;
+    }
+
+    .gallery-item{
+      position:relative;
+      overflow:hidden;
+      background:#111111;
+      aspect-ratio:16 / 9;
+    }
+
+    .gallery-item img{
+      width:100%;
+      height:100%;
+      display:block;
+      object-fit:cover;
+      transition:transform .45s ease;
+    }
+
+    .gallery-item:hover img{
+      transform:scale(1.025);
+    }
+
+    @media (max-width:900px){
+      .gallery-grid{
+        grid-template-columns:repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width:560px){
+      .gallery{
+        padding:5px;
+      }
+
+      .gallery-grid{
+        grid-template-columns:1fr;
+        gap:5px;
+      }
+
+      .gallery-item{
+        aspect-ratio:16 / 10;
+      }
+    }
+
   </style>
 </head>
 
@@ -336,6 +390,20 @@
         <p class="features-description">
           Esto permitirá que las nuevas instalaciones actuales permanezcan integralmente destinadas a ser casa de oración, lugar para talleres de prevención e intervención contra el abuso sexual infantil y más actividades para el crecimiento espiritual y restauración de las almas.
         </p>
+      </div>
+    </section>
+
+  
+    <section class="gallery" aria-label="Galería del proyecto Edificando Casa">
+      <div class="gallery-grid">
+        <figure class="gallery-item"><img src="edificando-galeria-01.webp" alt="Render del proyecto Edificando Casa" loading="lazy"></figure>
+        <figure class="gallery-item"><img src="edificando-galeria-02.webp" alt="Render del proyecto Edificando Casa" loading="lazy"></figure>
+        <figure class="gallery-item"><img src="edificando-galeria-03.webp" alt="Render del proyecto Edificando Casa" loading="lazy"></figure>
+        <figure class="gallery-item"><img src="edificando-galeria-04.webp" alt="Render del proyecto Edificando Casa" loading="lazy"></figure>
+        <figure class="gallery-item"><img src="edificando-galeria-05.webp" alt="Render del proyecto Edificando Casa" loading="lazy"></figure>
+        <figure class="gallery-item"><img src="edificando-galeria-06.webp" alt="Render del proyecto Edificando Casa" loading="lazy"></figure>
+        <figure class="gallery-item"><img src="edificando-galeria-07.webp" alt="Render del proyecto Edificando Casa" loading="lazy"></figure>
+        <figure class="gallery-item"><img src="edificando-galeria-08.webp" alt="Render del proyecto Edificando Casa" loading="lazy"></figure>
       </div>
     </section>
 
