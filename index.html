@@ -137,6 +137,21 @@
     .navlinks a{opacity:.78}
     .navlinks a:hover{opacity:1}
 
+    .navlinks .nav-cta{
+      background:var(--sand);
+      color:var(--black);
+      opacity:1;
+      padding:10px 16px;
+      border-radius:999px;
+      font-weight:700;
+      transition:.2s ease;
+    }
+
+    .navlinks .nav-cta:hover{
+      transform:translateY(-1px);
+      opacity:1;
+    }
+
     .hero{
       min-height:100vh;
       display:flex;
@@ -408,7 +423,7 @@
       <a href="#reuniones">Reuniones</a>
       <a href="#ubicacion">Ubicación</a>
       <a href="#contacto">Instagram</a>
-      <a href="edificando-casa.html">Edificando Casa</a>
+      <a class="nav-cta" href="edificando-casa.html">Edificando Casa</a>
     </nav>
   </div>
 </header>
