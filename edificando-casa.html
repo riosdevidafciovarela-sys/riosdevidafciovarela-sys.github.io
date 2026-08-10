@@ -316,6 +316,172 @@
       }
     }
 
+  
+    .donation{
+      background:#ffffff;
+      color:#000000;
+      padding:110px 0 120px;
+    }
+
+    .donation-wrap{
+      width:min(90%, 1120px);
+      margin:0 auto;
+      text-align:center;
+    }
+
+    .donation-copy{
+      max-width:1000px;
+      margin:0 auto;
+      font-size:18px;
+      line-height:1.55;
+      color:#222222;
+      letter-spacing:-.01em;
+    }
+
+    .donation-copy + .donation-copy{
+      margin-top:26px;
+    }
+
+    .donation-title{
+      margin:54px auto 38px;
+      max-width:1000px;
+      font-size:clamp(42px, 6vw, 82px);
+      line-height:.98;
+      letter-spacing:-.05em;
+      font-weight:700;
+      text-transform:uppercase;
+    }
+
+    .donation-details{
+      width:min(100%, 620px);
+      margin:0 auto;
+    }
+
+    .donation-details summary{
+      list-style:none;
+      cursor:pointer;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-height:56px;
+      padding:0 30px;
+      border-radius:999px;
+      background:#d6c9b8;
+      color:#000000;
+      font-size:16px;
+      font-weight:700;
+      letter-spacing:-.01em;
+      transition:.2s ease;
+      user-select:none;
+    }
+
+    .donation-details summary::-webkit-details-marker{
+      display:none;
+    }
+
+    .donation-details summary:hover{
+      transform:translateY(-1px);
+    }
+
+    .donation-card{
+      margin-top:22px;
+      background:#000000;
+      color:#ffffff;
+      border-radius:24px;
+      padding:30px;
+      text-align:left;
+    }
+
+    .donation-card h3{
+      margin:0 0 24px;
+      font-size:24px;
+      line-height:1.1;
+      letter-spacing:-.03em;
+    }
+
+    .bank-row{
+      display:grid;
+      grid-template-columns:120px 1fr;
+      gap:16px;
+      padding:14px 0;
+      border-top:1px solid rgba(255,255,255,.12);
+    }
+
+    .bank-row:first-of-type{
+      border-top:0;
+      padding-top:0;
+    }
+
+    .bank-label{
+      color:#d6c9b8;
+      font-size:14px;
+      font-weight:500;
+    }
+
+    .bank-value{
+      font-size:16px;
+      font-weight:500;
+      word-break:break-word;
+    }
+
+    @media (max-width:560px){
+      .donation{
+        padding:82px 0 88px;
+      }
+
+      .donation-wrap{
+        width:88%;
+        text-align:left;
+      }
+
+      .donation-title{
+        margin:42px 0 30px;
+        font-size:42px;
+      }
+
+      .donation-details{
+        margin:0;
+      }
+
+      .donation-card{
+        padding:24px;
+      }
+
+      .bank-row{
+        grid-template-columns:1fr;
+        gap:5px;
+      }
+    }
+
+  
+    .donation-options{
+      display:flex;
+      justify-content:center;
+      align-items:flex-start;
+      gap:18px;
+      flex-wrap:wrap;
+    }
+
+    .donation-options .donation-details{
+      width:min(100%, 420px);
+      margin:0;
+    }
+
+    @media (max-width:700px){
+      .donation-options{
+        flex-direction:column;
+        align-items:stretch;
+      }
+
+      .donation-options .donation-details{
+        width:100%;
+      }
+
+      .donation-options .donation-details summary{
+        width:100%;
+      }
+    }
+
   </style>
 </head>
 
@@ -403,6 +569,81 @@
         <figure class="gallery-item"><img src="edificando-galeria-04.webp" alt="Render del proyecto Edificando Casa" loading="lazy"></figure>
         <figure class="gallery-item"><img src="edificando-galeria-05.webp" alt="Render del proyecto Edificando Casa" loading="lazy"></figure>
         <figure class="gallery-item"><img src="edificando-galeria-06.webp" alt="Render del proyecto Edificando Casa" loading="lazy"></figure>
+      </div>
+    </section>
+
+  
+    <section class="donation" id="donacion">
+      <div class="donation-wrap">
+        <p class="donation-copy">
+          Queremos invitarte a ser parte de esta expansión, entendiendo que es una inversión en el establecimiento y avance del Reino de Dios (Mt. 6:19-21).
+        </p>
+
+        <p class="donation-copy">
+          Cada contribución será una piedra fundamental en la edificación de este lugar consagrado al Señor.
+        </p>
+
+        <h2 class="donation-title">
+          Sé parte de este sueño de Dios<br>
+          ¡Sé parte de su historia!
+        </h2>
+
+        
+        <div class="donation-options">
+
+          <details class="donation-details">
+            <summary>DONACIÓN EN PESOS</summary>
+
+            <div class="donation-card">
+              <h3>Datos para transferir en pesos</h3>
+
+              <div class="bank-row">
+                <div class="bank-label">Banco</div>
+                <div class="bank-value">Mercado Pago</div>
+              </div>
+
+              <div class="bank-row">
+                <div class="bank-label">Titular</div>
+                <div class="bank-value">Raul Javier Salica</div>
+              </div>
+
+              <div class="bank-row">
+                <div class="bank-label">Alias</div>
+                <div class="bank-value">refugiodla</div>
+              </div>
+
+              <div class="bank-row">
+                <div class="bank-label">CBU/CVU</div>
+                <div class="bank-value">0000003100071155830116</div>
+              </div>
+            </div>
+          </details>
+
+          <details class="donation-details">
+            <summary>DONACIÓN EN DÓLARES</summary>
+
+            <div class="donation-card">
+              <h3>Datos para transferir en dólares</h3>
+
+              <div class="bank-row">
+                <div class="bank-label">Banco</div>
+                <div class="bank-value">Banco Industrial (BIND)</div>
+              </div>
+
+              <div class="bank-row">
+                <div class="bank-label">Titular</div>
+                <div class="bank-value">Raul Javier Salica</div>
+              </div>
+
+              <div class="bank-row">
+                <div class="bank-label">CBU/CVU</div>
+                <div class="bank-value">3220001888071288300010</div>
+              </div>
+            </div>
+          </details>
+
+        </div>
+
       </div>
     </section>
 
