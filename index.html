@@ -159,6 +159,31 @@
       opacity:1;
     }
 
+    .menu-toggle,
+    .menu-button{
+      display:none;
+    }
+
+    .menu-button{
+      width:42px;
+      height:42px;
+      align-items:center;
+      justify-content:center;
+      flex-direction:column;
+      gap:5px;
+      cursor:pointer;
+      position:relative;
+      z-index:120;
+    }
+
+    .menu-button span{
+      width:22px;
+      height:2px;
+      background:var(--white);
+      border-radius:999px;
+      transition:.25s ease;
+    }
+
     .hero{
       min-height:100vh;
       display:flex;
@@ -398,15 +423,92 @@
     }
 
     @media (max-width:800px){
-      .navlinks{display:none}
-      .nav{height:70px}
+      .nav{
+        height:70px;
+      }
+
+      .brand{
+        position:relative;
+        z-index:120;
+      }
+
+      .brand span{
+        font-size:15px;
+      }
+
+      .brand img{
+        width:40px;
+        height:40px;
+      }
+
+      .menu-button{
+        display:flex;
+      }
+
+      .navlinks{
+        position:fixed;
+        top:70px;
+        left:0;
+        right:0;
+        display:flex;
+        flex-direction:column;
+        align-items:stretch;
+        gap:0;
+        padding:18px 6% 26px;
+        background:rgba(0,0,0,.97);
+        border-top:1px solid rgba(255,255,255,.08);
+        border-bottom:1px solid rgba(255,255,255,.08);
+        transform:translateY(-130%);
+        opacity:0;
+        pointer-events:none;
+        transition:.28s ease;
+        z-index:110;
+      }
+
+      .navlinks a{
+        width:100%;
+        min-height:52px;
+        justify-content:flex-start;
+        border-bottom:1px solid rgba(255,255,255,.08);
+        font-size:16px;
+      }
+
+      .navlinks .nav-cta{
+        margin-top:14px;
+        width:max-content;
+        min-height:46px;
+        padding:0 18px;
+        border-bottom:0;
+        justify-content:center;
+      }
+
+      .menu-toggle:checked ~ .navlinks{
+        transform:translateY(0);
+        opacity:1;
+        pointer-events:auto;
+      }
+
+      .menu-toggle:checked + .menu-button span:nth-child(1){
+        transform:translateY(7px) rotate(45deg);
+      }
+
+      .menu-toggle:checked + .menu-button span:nth-child(2){
+        opacity:0;
+      }
+
+      .menu-toggle:checked + .menu-button span:nth-child(3){
+        transform:translateY(-7px) rotate(-45deg);
+      }
+
       .hero{padding-top:100px}
+
       .hero-grid,
       .intro-grid,
       .location-grid{
         grid-template-columns:1fr;
         gap:42px;
       }
+
       .hero-logo{order:-1}
       .hero-logo img{width:170px}
       .cards{grid-template-columns:1fr}
@@ -424,6 +526,13 @@
       <img src="logo.png" alt="Logo Ríos de Vida">
       <span>Ríos de Vida</span>
     </a>
+
+    <input class="menu-toggle" type="checkbox" id="menu-toggle" aria-label="Abrir menú">
+    <label class="menu-button" for="menu-toggle" aria-hidden="true">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
 
     <nav class="navlinks">
       <a href="#nosotros">Nosotros</a>
